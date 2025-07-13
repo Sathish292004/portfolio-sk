@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathish Kumar B - Portfolio</title>
+    <meta name="description" content="Portfolio of Sathish Kumar B - Computer Science Engineering Student & Developer">
+    <meta name="author" content="Sathish Kumar B">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">SK</div>
+            <div class="nav-menu">
+                <button onclick="scrollToSection('home')" class="nav-link">Home</button>
+                <button onclick="scrollToSection('about')" class="nav-link">About</button>
+                <button onclick="scrollToSection('experience')" class="nav-link">Experience</button>
+                <button onclick="scrollToSection('skills')" class="nav-link">Skills</button>
+                <button onclick="scrollToSection('services')" class="nav-link">Services</button>
+                <button onclick="scrollToSection('projects')" class="nav-link">Projects</button>
+                <button onclick="scrollToSection('contact')" class="btn btn-primary">Contact</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span>Final Year CSE Student</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Sathish Kumar B</span>
+                    </h1>
+                    <p class="hero-description">
+                        A developer passionate about building real-world software solutions that make a difference.
+                    </p>
+                    <div class="hero-buttons">
+                        <button onclick="scrollToSection('projects')" class="btn btn-primary btn-large">
+                            View My Work
+                        </button>
+                        <button onclick="scrollToSection('contact')" class="btn btn-outline btn-large">
+                            Get in Touch
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <div class="profile-ring">
+                            <div class="profile-bg">
+                                <img src="https://i.postimg.cc/qBSf3gsx/Chat-GPT-Image-Jul-13-2025-02-23-03-AM.png" alt="SK" class="profile-img">
+                            </div>
+                        </div>
+                        <div class="profile-glow profile-glow-1"></div>
+                        <div class="profile-glow profile-glow-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button onclick="scrollToSection('about')" class="scroll-down">
+            <i data-lucide="chevron-down"></i>
+        </button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm currently in my final year of Computer Science Engineering, and what excites me most is building software that actually solves real-world problems. Whether it's writing code in Java or Python, or bringing ideas to life through web development, I enjoy not just the technical part — but also working with people, sharing ideas, and growing together as a team.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <h4>Current Focus</h4>
+                            <p>Building real-world software solutions</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Collaboration</h4>
+                            <p>Working with teams and sharing ideas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="education">
+                    <h3>Education</h3>
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h4>B.E. Computer Science and Engineering</h4>
+                            <p class="institution">KPR Institute of Engineering and Technology</p>
+                            <div class="education-date">
+                                <i data-lucide="calendar"></i>
+                                <span>2023 - 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h4>Diploma in Mechanical Engineering</h4>
+                            <p class="institution">Kongu Velalar Polytechnic College</p>
+                            <div class="education-date">
+                                <i data-lucide="calendar"></i>
+                                <span>2020 - 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Machine Learning Intern</h3>
+                        <p class="company">CodSoft</p>
+                        <p class="description">Built and deployed ML models using Python and libraries like scikit-learn.</p>
+                        <p class="achievements">Worked on real-world datasets, gained hands-on exposure to industry workflows.</p>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <i data-lucide="network"></i>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Virtual Intern</h3>
+                        <p class="company">Cisco</p>
+                        <p class="description">Focused on networking concepts, design, and troubleshooting.</p>
+                        <p class="achievements">Developed solid understanding of network infrastructure and IT practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i data-lucide="code"></i>
+                    </div>
+                    <h3>Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">HTML</span>
+                        <span class="skill-item">CSS</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i data-lucide="wrench"></i>
+                    </div>
+                    <h3>Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">VS Code</span>
+                        <span class="skill-item">Eclipse</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">Power BI</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <h3>Frameworks</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">JavaScript Libraries</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Soft Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Leadership</span>
+                        <span class="skill-item">Strategy</span>
+                        <span class="skill-item">Adaptability</span>
+                        <span class="skill-item">Collaboration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What I Can Help You With</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="lightbulb"></i>
+                    </div>
+                    <h3>Real-world Case Studies</h3>
+                    <p>Measurable outcomes with practical applications</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Interactive UI Designs</h3>
+                    <p>Responsive and engaging user interfaces</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="video"></i>
+                    </div>
+                    <h3>Animation & Prototypes</h3>
+                    <p>Dynamic demos and interactive prototypes</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <h3>UX Writing & Flows</h3>
+                    <p>User-centered design and content strategy</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="sprout"></i>
+                    </div>
+                    <h3>Passion Projects</h3>
+                    <p>Unique interests and creative solutions</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+                    <h3>Professional Documentation</h3>
+                    <p>Comprehensive documentation and stakeholder endorsements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header blue-gradient">
+                        <i data-lucide="home"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Home-Based Responsive Web App</h3>
+                        <p class="project-description">
+                            A comprehensive web application for smart home device control with real-time monitoring, mobile-first design, and accessibility features.
+                        </p>
+                        <div class="project-section">
+                            <h4>Technologies:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-section">
+                            <h4>Key Features:</h4>
+                            <ul class="feature-list">
+                                <li>Real-time device control</li>
+                                <li>Mobile-first design</li>
+                                <li>Accessibility optimized</li>
+                            </ul>
+                        </div>
+                        <div class="project-buttons">
+                            <button class="btn btn-outline btn-small">
+                                <i data-lucide="github"></i>
+                                <a href="https://github.com/Sathish292004/smart-home.git">Code Us</a> 
+                            </button>
+                            <button class="btn btn-primary btn-small">
+                                <i data-lucide="external-link"></i>
+                                <a href="https://sathish292004.github.io/smart-home/">Live Demo Us</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header green-gradient">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>News Reader - Android App</h3>
+                        <p class="project-description">
+                            A clean and intuitive Android application for reading news with personalized feeds, real-time updates, and smooth performance.
+                        </p>
+                        <div class="project-section">
+                            <h4>Technologies:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Android Studio</span>
+                                <span class="tech-tag">APIs</span>
+                            </div>
+                        </div>
+                        <div class="project-section">
+                            <h4>Key Features:</h4>
+                            <ul class="feature-list">
+                                <li>Personalized news feeds</li>
+                                <li>Real-time updates</li>
+                                <li>Smooth performance</li>
+                            </ul>
+                        </div>
+                        <div class="project-buttons">
+                            <button class="btn btn-outline btn-small">
+                                <i data-lucide="github"></i>
+                               <a href="https://github.com/Sathish292004/news_.reader_.android_app.git">Code Us</a> 
+                            </button>
+                            <button class="btn btn-primary btn-small">
+                                <i data-lucide="external-link"></i>
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p class="contact-description">
+                        I'm always excited to discuss new opportunities and collaborate on projects that make a real impact. Feel free to reach out!
+                    </p>
+                    <div class="contact-cards">
+                        <a href="mailto:Sathishsince2004@gmail.com" class="contact-card">
+                            <div class="contact-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p class="contact-label">Email</p>
+                                <p class="contact-value">sathishsince2004@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="tel:8678941800" class="contact-card">
+                            <div class="contact-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p class="contact-label">Phone</p>
+                                <p class="contact-value">8678941800</p>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/sathish292004" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p class="contact-label">LinkedIn</p>
+                                <p class="contact-value">linkedin.com/in/sathish292004</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Sathish292004" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <i data-lucide="github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p class="contact-label">GitHub</p>
+                                <p class="contact-value">github.com/Sathish292004</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-card">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <span id="submitText">Send Message</span>
+                            <span id="submitLoader" class="loader" style="display: none;">
+                                <i data-lucide="loader-2"></i>
+                                Sending...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Sathish Kumar B</h3>
+                    <p>Building software that makes a difference</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/sathish292004" target="_blank" class="social-link">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Sathish292004" target="_blank" class="social-link">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="mailto:Sathishsince2004@gmail.com" class="social-link">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Sathish Kumar B. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
