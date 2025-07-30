@@ -259,7 +259,7 @@ html {
 
 .profile-ring {
     width: 20rem;
-    height: 20rem;
+    height: 15rem;
     border-radius: 50%;
     background: var(--gradient-accent);
     padding: 4px;
@@ -275,7 +275,7 @@ html {
 
 .profile-img {
     width: 100%;
-    height: 500%;
+    height: 100%;
     object-fit: contain;
 }
 
